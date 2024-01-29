@@ -151,28 +151,17 @@ export default function ActivityPage() {
             <div
               title="Github"
               onClick={() =>
-                window.open("https://github.com/daniel-jebarson", "_blank")
+                window.open("https://github.com/tokyRonaldo", "_blank")
               }
             >
               <GitHubIcon className="cursor-pointer hover:scale-105" />
             </div>
-            <div
-              title="Instagram"
-              onClick={() =>
-                window.open(
-                  "https://www.instagram.com/daniel_diago2003",
-                  "_blank"
-                )
-              }
-            >
-              {" "}
-              <InstagramIcon className="cursor-pointer hover:scale-105" />
-            </div>
+           
             <div
               title="Linkedin"
               onClick={() =>
                 window.open(
-                  "https://www.linkedin.com/in/daniel-jebarson-k-a727a822a",
+                  "www.linkedin.com/in/ronaldo-toky-developpeur",
                   "_blank"
                 )
               }
@@ -184,7 +173,7 @@ export default function ActivityPage() {
               title="Facebook"
               onClick={() =>
                 window.open(
-                  "https://www.facebook.com/daniel.jebarson.9",
+                  "https://web.facebook.com/toki.maharavo/",
                   "_blank"
                 )
               }

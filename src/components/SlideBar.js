@@ -27,7 +27,7 @@ export default function Slidebar() {
           <NavLink to={"/activity"}>
             <img
               src={require("../assets/images/image_toky.jpg")}
-              alt="Daniel Jebarson"
+              alt="Tokimaharavo ronaldo"
               title="Discord Activity"
               className="rounded-full border-solid cursor-pointer  border-[8px] border-stone-600 min-h-fit mx-auto  max-w-[190px]"
             />
