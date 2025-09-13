@@ -21,7 +21,7 @@ export default function Slidebar() {
   };
 
   return (
-    <div className="flex-none hidden lg:block  bg-black h-screen min-w-[25%] fixed ">
+    <div className="flex-none  bg-black h-screen min-w-[25%] lg:fixed ">
       <div className="nav flex  text-white text-lg mt-10 flex-col align-middle justify-center text-center w-full gap-5 overflow-hidden">
         <div data-aos="slide-down">
           <NavLink to={"/activity"}>
@@ -38,11 +38,10 @@ export default function Slidebar() {
         </div>
         <p
           onClick={() => setSelect(0)}
-          className={`cursor-pointer hover:text-blue-600 hover:-translate-y-0.5 hover:text-xl transition hover:transition ${
+          className={`cursor-pointer animate__animated animate__backInLeft animate__delay-0-5s hover:text-blue-600 hover:-translate-y-0.5 hover:text-xl transition hover:transition ${
             select === 0 ? "text-blue-600 " : ""
           }`}
-          data-aos="slide-right"
-          data-aos-delay="200"
+      
         >
           <NavLink
             to="#"
@@ -55,11 +54,12 @@ export default function Slidebar() {
         </p>
         <p
           onClick={() => setSelect(1)}
-          className={`cursor-pointer hover:text-blue-600 hover:-translate-y-0.5 hover:text-xl transition hover:transition ${
+          className={`cursor-pointer animate__animated animate__backInRight animate__delay-1s hover:text-blue-600 hover:-translate-y-0.5 hover:text-xl transition hover:transition ${
             select === 1 ? "text-blue-600 " : ""
           }`}
-          data-aos-delay="600"
-          data-aos="slide-left"
+
+
+          
         >
           <NavLink
             to="#about"
@@ -72,11 +72,10 @@ export default function Slidebar() {
         </p>
         <p
           onClick={() => setSelect(2)}
-          className={`cursor-pointer hover:text-blue-600 hover:-translate-y-0.5 hover:text-xl transition hover:transition ${
+          className={`cursor-pointer animate__animated animate__backInLeft animate__delay-1-5s hover:text-blue-600 hover:-translate-y-0.5 hover:text-xl transition hover:transition ${
             select === 2 ? "text-blue-600 " : ""
           }`}
-          data-aos="slide-right"
-          data-aos-delay="1000"
+       
         >
           <NavLink
             to="#resume"
@@ -89,11 +88,10 @@ export default function Slidebar() {
         </p>
         <p
           onClick={() => setSelect(3)}
-          className={`cursor-pointer hover:text-blue-600 hover:-translate-y-0.5 hover:text-xl transition hover:transition ${
+          className={`cursor-pointer animate__animated animate__backInRight animate__delay-2s hover:text-blue-600 hover:-translate-y-0.5 hover:text-xl transition hover:transition ${
             select === 3 ? "text-blue-600 " : ""
           }`}
-          data-aos="slide-left"
-          data-aos-delay="1400"
+
         >
           <NavLink
             to="#projects"
@@ -106,11 +104,10 @@ export default function Slidebar() {
         </p>
         <p
           onClick={() => setSelect(4)}
-          className={`cursor-pointer hover:text-blue-600 hover:-translate-y-0.5 hover:text-xl transition hover:transition ${
+          className={`cursor-pointer animate__animated animate__backInLeft animate__delay-2-5s hover:text-blue-600 hover:-translate-y-0.5 hover:text-xl transition hover:transition ${
             select === 4 ? "text-blue-600 " : ""
           }`}
-          data-aos="slide-right"
-          data-aos-delay="1800"
+   
         >
           <NavLink
             to="#contact"
@@ -124,8 +121,7 @@ export default function Slidebar() {
       </div>
       <div
         className="text-white flex flex-row gap-5 w-fit mx-auto pt-7"
-        data-aos="slide-up"
-        data-aos-delay="2300"
+
       >
  
         <div

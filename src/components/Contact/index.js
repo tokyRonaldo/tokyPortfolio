@@ -41,7 +41,7 @@ export default function Contact() {
         (response) => {
           setMailSent(true);
           setLoading(false);
-          toast.success("Message Sent Successfully!", {
+          /*toast.success("Message Sent Successfully!", {
             position: "bottom-center",
             autoClose: 5000,
             hideProgressBar: false,
@@ -50,8 +50,15 @@ export default function Contact() {
             draggable: true,
             progress: undefined,
             theme: "colored",
-          });
+          });*/
           console.log("SUCCESS!", response.status, response.text);
+          setTimeout(()=>{
+            username.value=""
+            email.value=""
+            message.value=""
+            setMailSent(false)
+            console.log('falsesss')
+          },5000)
         },
         (err) => {
           setLoading(false);
@@ -69,6 +76,7 @@ export default function Contact() {
         }
       );
   };
+  
   return (
     <div
       id="contact"

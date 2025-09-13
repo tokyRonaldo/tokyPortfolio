@@ -73,3 +73,13 @@
   pointer-events: none;
   mix-blend-mode: difference;
 }
+
+.animate__delay-0-5s {
+  animation-delay: 0.5s !important;
+}
+.animate__delay-1-5s {
+  animation-delay: 1.5s !important;
+}
+.animate__delay-2-5s {
+  animation-delay: 2.5s !important;
+}
