@@ -12,7 +12,9 @@ export default function work({ title, desc, tags, link, code, img }) {
     >
       <div className="bg-[#0b212d] w-full h-full rounded-2xl p-4 flex flex-col justify-between">
         <div>
-          <div className="relative w-full rounded-2xl">
+          <div className={`relative w-full rounded-2xl ${link ? "cursor-pointer" : ""}`}
+           onClick={link ? () => window.open(link, "_blank") : undefined}
+          > 
             <img
               src={img}
               alt={title}
@@ -20,8 +22,8 @@ export default function work({ title, desc, tags, link, code, img }) {
             />
             <div className="absolute inset-0 flex justify-end m-3 ">
               <div
-                onClick={() => window.open(link, "_blank")}
-                className="bg-slate-800 w-9 h-9 rounded-full border-[1px] border-secondary flex items-center justify-center cursor-pointer mr-2"
+                onClick={link ? () => window.open(link, "_blank") : undefined}
+                className={`bg-slate-800 w-9 h-9 rounded-full border-[1px] border-secondary flex items-center justify-center mr-2 ${link ? "cursor-pointer" : ""}`}
               >
                 <img
                   src={require("../../assets/images/gotosite.webp")}
@@ -30,8 +32,14 @@ export default function work({ title, desc, tags, link, code, img }) {
                 />
               </div>
               <div
-                onClick={() => window.open(code, "_blank")}
-                className="bg-slate-800 w-9 h-9 rounded-full border-[1px] border-secondary flex items-center justify-center cursor-pointer "
+                onClick={(e) => {
+                  e.stopPropagation(); // bloque le click de remonter au parent
+                  if (code) {
+                    window.open(code, "_blank"); // ouvre le lien
+                  } 
+                }}
+              
+                className={`bg-slate-800 w-9 h-9 rounded-full border-[1px] border-secondary flex items-center justify-center ${code ? "cursor-pointer" : "cursor-default"}`}
               >
                 <img
                   src={require("../../assets/images/github.webp")}
