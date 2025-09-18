@@ -26,10 +26,10 @@ export default function Slidebar() {
         <div data-aos="slide-down">
           <NavLink to={"/activity"}>
             <img
-              src={require("../assets/images/image_toky.jpg")}
+              src={require("../assets/images/IMG-20250913-WA0010.jpg")}
               alt="Tokimaharavo ronaldo"
               title="Discord Activity"
-              className="rounded-full border-solid cursor-pointer  border-[8px] border-stone-600 min-h-fit mx-auto  max-w-[190px]"
+              className="rounded-full border-solid cursor-pointer  border-stone-600 min-h-[190px] mx-auto  max-w-[190px]"
             />
             <h3 className="text-white name py-4 font-medium ">
               Tokimaharavo ronaldo
