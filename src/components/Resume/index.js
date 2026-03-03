@@ -60,7 +60,7 @@ export default function Resume() {
               Séptembre 2024 - Maintenant
             </time>
             <p class="text-base font-normal text-gray-400">
-              Développement de nouvelles fonctionnalités, notamment la gestion locative et la gestion des contrats de bail, au sein du projet Bailiti.
+              Développement de nouvelles fonctionnalités, notamment la gestion locative et la gestion des contrats de bail, au sein du projet Bailiti(Laravel,Blade).
             </p>
           
           </li>
