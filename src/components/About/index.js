@@ -29,21 +29,20 @@ export default function About() {
             className="text-xl lg:text-3xl font-medium"
             data-aos={"fade-left"}
           >
-            Je suis <span className="text-yellow-600">Tokimaharavo Ronaldo,</span> développeur web junior
+            Je suis <span className="text-yellow-600">Tokimaharavo Ronaldo,</span> développeur web fullStack junior
           </h3>
           <p
             className="pt-5 leading-7 text-slate-900 text-justify"
             data-aos={"fade-left"}
           >
-            J'aime faire du sport, jouer au jeux video et écouter de la musique. Je viens d'avoir mon master II en informatique, parcours génie logiciel et base des données. J'ai 25 ans
-            et j'aime relever des défis
+            Développeur Web spécialisé en PHP (Laravel, Symfony) et JavaScript (Vue.js, React.js), je conçois des applications web modernes, performantes et évolutives.
           </p>
           <p
             className="text-justify leading-7 text-slate-900"
             data-aos={"fade-right"}
           >
-            je suis un développeur PHP(laravel,symfony) et JAVASCRIPT(vuejs,reactjs)
-            Je suis à la recherche d'une opportunité de travail ou de stage d'embauche. J'ai déja quelques expériences acquis au cours des nombreux stages.
+            Fort d’expériences en entreprise et de plusieurs stages professionnels, j’ai participé au développement de solutions concrètes répondant à des besoins métiers réels.
+            Aujourd’hui, je suis ouvert aux opportunités en présentiel ou en remote, pour des missions freelance ou des collaborations à long terme, en solo ou en équipe selon l’ampleur du projet.
           </p>
         </div>
 
