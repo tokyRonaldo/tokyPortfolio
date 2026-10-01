@@ -35,7 +35,7 @@ export default function About() {
             className="pt-5 leading-7 text-slate-900 text-justify"
             data-aos={"fade-left"}
           >
-            Développeur Web spécialisé en PHP (Laravel, Symfony) et JavaScript (Vue.js, React.js), je conçois des applications web modernes, performantes et évolutives.
+            Développeur Web spécialisé en PHP (Laravel, Symfony) et JavaScript (Vue.js, React.js, Nextjs), je conçois des applications web modernes, performantes et évolutives.
           </p>
           <p
             className="text-justify leading-7 text-slate-900"
