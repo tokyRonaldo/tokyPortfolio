@@ -1,16 +1,16 @@
 import "../../App.css";
 import DownloadIcon from "@mui/icons-material/Download";
-import * as LottiePlayer from "@lottiefiles/lottie-player";
+//import * as LottiePlayer from "@lottiefiles/lottie-player";
 
 export default function About() {
-  const getDate = () => {
+  /*const getDate = () => {
     var dob = new Date("01/21/2003");
     var month_diff = Date.now() - dob.getTime();
     var age_dt = new Date(month_diff);
     var year = age_dt.getUTCFullYear();
     var age = Math.abs(year - 1970);
     return age;
-  };
+  };*/
 
   return (
     <div
@@ -29,7 +29,7 @@ export default function About() {
             className="text-xl lg:text-3xl font-medium"
             data-aos={"fade-left"}
           >
-            Je suis <span className="text-yellow-600">Tokimaharavo Ronaldo,</span> développeur web fullStack junior
+            Je suis <span className="text-yellow-600">Tokimaharavo Ronaldo,</span> développeur web fullStack
           </h3>
           <p
             className="pt-5 leading-7 text-slate-900 text-justify"
