@@ -1,4 +1,4 @@
-import React from 'react';
+//import React from 'react';
 //import sitraProjectImage from '../../src/assets/images/vente-gest-facture.png';
 //import blogTokyImage from '../../src/assets/images/home_blog.png';
 //import gbModeImage from '../../src/assets/images/accueil_gb_mode.png';
