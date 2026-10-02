@@ -1,6 +1,13 @@
 import Tilt from "react-parallax-tilt";
 
-export default function work({ title, desc, tags, link, code, img }) {
+export default function Work({ title, desc, tags, link, code, img }) {
+
+  const openLink = () => {
+    if (link) {
+      window.open(link, "_blank", "noopener,noreferrer");
+    }
+  };
+
   return (
     <Tilt
       options={{
@@ -8,61 +15,72 @@ export default function work({ title, desc, tags, link, code, img }) {
         scale: 1,
         speed: 450,
       }}
-      className="bg-[#0b212d]  rounded-2xl max-w-[362px]  h-full bg-gradient-to-r from-green-700 to-pink-800 p-[1px]"
+      className="bg-[#0b212d] rounded-2xl max-w-[362px] h-full bg-gradient-to-r from-green-700 to-pink-800 p-[1px]"
     >
       <div className="bg-[#0b212d] w-full h-full rounded-2xl p-4 flex flex-col justify-between">
+
         <div>
-          <div className={`relative w-full rounded-2xl ${link ? "cursor-pointer" : ""}`}
-           onClick={link ? () => window.open(link, "_blank") : undefined}
-          > 
+
+          <div
+            className={`relative w-full rounded-2xl ${
+              link ? "cursor-pointer" : ""
+            }`}
+            onClick={openLink}
+          >
+
             <img
               src={img}
               alt={title}
               className="w-full h-full max-h-[200px] min-h-[200px] rounded-[10px] object-cover border-[1px] border-secondary"
             />
-            <div className="absolute inset-0 flex justify-end m-3 ">
-              <div
-                onClick={ () => {
-                  console.log('link:',link);
-                  if(link){
-                    window.open(link, "_blank")
-                  }
-                }}
-                className={`bg-slate-800 w-9 h-9 rounded-full border-[1px] border-secondary flex items-center justify-center mr-2 ${link ? "cursor-pointer" : ""}`}
-              >
-                <img
-                  src={require("../../assets/images/gotosite.webp")}
-                  alt={"gotosite"}
-                  className="w-4/5 h-4/5 object-contain"
-                />
-              </div>
-              <div
-                onClick={(e) => {
-                  e.stopPropagation(); // bloque le click de remonter au parent
-                  console.log('code:',code);
-                  if (code) {
-                    window.open(code, "_blank"); // ouvre le lien
-                  } 
-                }}
-              
-                className={`bg-slate-800 w-9 h-9 rounded-full border-[1px] border-secondary flex items-center justify-center ${code ? "cursor-pointer" : "cursor-default"}`}
-              >
-                <img
-                  src={require("../../assets/images/github.webp")}
-                  alt={"github"}
-                  className="w-3/5 h-3/5 lg:w-4/5 lg:h-4/5 object-contain"
-                />
-              </div>
+
+            <div className="absolute inset-0 flex justify-end m-3">
+
+              {link && (
+                <a
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="bg-slate-800 w-9 h-9 rounded-full border-[1px] border-secondary flex items-center justify-center mr-2 cursor-pointer"
+                >
+                  <img
+                    src={require("../../assets/images/gotosite.webp")}
+                    alt="Voir le projet"
+                    className="w-4/5 h-4/5 object-contain"
+                  />
+                </a>
+              )}
+
+              {code && (
+                <a
+                  href={code}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="bg-slate-800 w-9 h-9 rounded-full border-[1px] border-secondary flex items-center justify-center cursor-pointer"
+                >
+                  <img
+                    src={require("../../assets/images/github.webp")}
+                    alt="GitHub"
+                    className="w-3/5 h-3/5 lg:w-4/5 lg:h-4/5 object-contain"
+                  />
+                </a>
+              )}
+
             </div>
           </div>
+
           <div className="mt-5">
             <h3 className="text-white font-bold text-[20px] lg:text-[24px]">
               {title}
             </h3>
+
             <p className="mt-2 text-secondary text-[10px] lg:text-[14px]">
               {desc}
             </p>
           </div>
+
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2 text-[10px] lg:text-[14px]">
@@ -75,6 +93,7 @@ export default function work({ title, desc, tags, link, code, img }) {
             </p>
           ))}
         </div>
+
       </div>
     </Tilt>
   );
