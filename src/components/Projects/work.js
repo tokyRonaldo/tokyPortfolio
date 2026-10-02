@@ -22,7 +22,12 @@ export default function work({ title, desc, tags, link, code, img }) {
             />
             <div className="absolute inset-0 flex justify-end m-3 ">
               <div
-                onClick={link ? () => window.open(link, "_blank") : undefined}
+                onClick={ () => {
+                  console.log('link:',link);
+                  if(link){
+                    window.open(link, "_blank")
+                  }
+                }}
                 className={`bg-slate-800 w-9 h-9 rounded-full border-[1px] border-secondary flex items-center justify-center mr-2 ${link ? "cursor-pointer" : ""}`}
               >
                 <img
@@ -34,6 +39,7 @@ export default function work({ title, desc, tags, link, code, img }) {
               <div
                 onClick={(e) => {
                   e.stopPropagation(); // bloque le click de remonter au parent
+                  console.log('code:',code);
                   if (code) {
                     window.open(code, "_blank"); // ouvre le lien
                   } 
