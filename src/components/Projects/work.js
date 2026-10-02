@@ -1,13 +1,6 @@
 import Tilt from "react-parallax-tilt";
 
 export default function Work({ title, desc, tags, link, code, img }) {
-
-  const openLink = () => {
-    if (link) {
-      window.open(link, "_blank", "noopener,noreferrer");
-    }
-  };
-
   return (
     <Tilt
       options={{
@@ -18,30 +11,40 @@ export default function Work({ title, desc, tags, link, code, img }) {
       className="bg-[#0b212d] rounded-2xl max-w-[362px] h-full bg-gradient-to-r from-green-700 to-pink-800 p-[1px]"
     >
       <div className="bg-[#0b212d] w-full h-full rounded-2xl p-4 flex flex-col justify-between">
-
         <div>
+          <div className="relative w-full rounded-2xl">
+            
+            {/* IMAGE CLIQUABLE */}
+            {link ? (
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full cursor-pointer"
+              >
+                <img
+                  src={img}
+                  alt={title}
+                  className="w-full h-full max-h-[200px] min-h-[200px] rounded-[10px] object-cover border-[1px] border-secondary"
+                />
+              </a>
+            ) : (
+              <img
+                src={img}
+                alt={title}
+                className="w-full h-full max-h-[200px] min-h-[200px] rounded-[10px] object-cover border-[1px] border-secondary"
+              />
+            )}
 
-          <div
-            className={`relative w-full rounded-2xl ${
-              link ? "cursor-pointer" : ""
-            }`}
-            onClick={openLink}
-          >
-
-            <img
-              src={img}
-              alt={title}
-              className="w-full h-full max-h-[200px] min-h-[200px] rounded-[10px] object-cover border-[1px] border-secondary"
-            />
-
-            <div className="absolute inset-0 flex justify-end m-3">
-
+            {/* BOUTONS SITE + GITHUB */}
+            <div className="absolute top-0 right-0 flex justify-end m-3">
+              
+              {/* SITE */}
               {link && (
                 <a
                   href={link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={(e) => e.stopPropagation()}
                   className="bg-slate-800 w-9 h-9 rounded-full border-[1px] border-secondary flex items-center justify-center mr-2 cursor-pointer"
                 >
                   <img
@@ -52,12 +55,12 @@ export default function Work({ title, desc, tags, link, code, img }) {
                 </a>
               )}
 
+              {/* GITHUB */}
               {code && (
                 <a
                   href={code}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={(e) => e.stopPropagation()}
                   className="bg-slate-800 w-9 h-9 rounded-full border-[1px] border-secondary flex items-center justify-center cursor-pointer"
                 >
                   <img
@@ -67,10 +70,10 @@ export default function Work({ title, desc, tags, link, code, img }) {
                   />
                 </a>
               )}
-
             </div>
           </div>
 
+          {/* TITRE + DESCRIPTION */}
           <div className="mt-5">
             <h3 className="text-white font-bold text-[20px] lg:text-[24px]">
               {title}
@@ -80,9 +83,9 @@ export default function Work({ title, desc, tags, link, code, img }) {
               {desc}
             </p>
           </div>
-
         </div>
 
+        {/* TECHNOLOGIES */}
         <div className="mt-4 flex flex-wrap gap-2 text-[10px] lg:text-[14px]">
           {tags.map((tag) => (
             <p
@@ -93,7 +96,6 @@ export default function Work({ title, desc, tags, link, code, img }) {
             </p>
           ))}
         </div>
-
       </div>
     </Tilt>
   );
