@@ -4,8 +4,8 @@
 //import gbModeImage from '../../src/assets/images/accueil_gb_mode.png';
 import MLS from '../../src/assets/images/Lms.png';
 import Wecoco from '../../src/assets/images/wecoco.png';
-import TokySign from '../../src/assets/images/tokySign.png';
-import TokyChat from '../../src/assets/images/toky-chat.png';
+//import TokySign from '../../src/assets/images/tokySign.png';
+//import TokyChat from '../../src/assets/images/toky-chat.png';
 import Beyaft from '../../src/assets/images/beyaft.png';
 import Caterly from '../../src/assets/images/caterly.png';
 import DevPulse from '../../src/assets/images/devpulse.png';
@@ -139,7 +139,7 @@ export const projects = [
     link: "",
     code: "https://github.com/tokyRonaldo/BlogDev",
   },
-  {
+  /*{
     title: "Toky chat",
     desc: "Un chat qui est basée par l'api de Gemini pour repondre au question",
     tags: [
@@ -189,7 +189,7 @@ export const projects = [
     img: TokySign,
     link: "https://toky-sign.vercel.app",
     code: "https://github.com/tokyRonaldo/tokySign",
-  },  
+  },  */
   
   
 ];
