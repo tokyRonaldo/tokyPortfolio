@@ -139,7 +139,7 @@ export const projects = [
     link: "",
     code: "https://github.com/tokyRonaldo/BlogDev",
   },
-  /*{
+  {
     title: "Toky chat",
     desc: "Un chat qui est basée par l'api de Gemini pour repondre au question",
     tags: [
@@ -189,7 +189,7 @@ export const projects = [
     img: TokySign,
     link: "https://toky-sign.vercel.app",
     code: "https://github.com/tokyRonaldo/tokySign",
-  },  */
+  },  
   
   
 ];
